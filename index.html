@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dice Battle</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+
+        <h1>Dice Battles</h1>
+        <p>Please Open the console via the Developer Tools</p>
+        <p style="opacity: 0.5;">Right-Click and Click Inspect</p>
+
+     <script>
+        
+        console.log("This is Dice Battles!");
+            
+        function getComputerRoll(){
+            const roll = ["1", "2", "3", "4", "5", "6"];
+            const index = Math.floor(Math.random() * 6);
+            return roll[index]; 
+        }
+        console.log(getComputerRoll());
+        
+
+    </script>
+
+    </body>
+
+
+</html>
