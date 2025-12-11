@@ -17,7 +17,8 @@
      <script>
         
         console.log("This is Dice Battles!");
-            
+        
+        //ComputerRoll
         function getComputerRoll(){
             const roll = ["1", "2", "3", "4", "5", "6"];
             const index = Math.floor(Math.random() * 6);
@@ -25,26 +26,21 @@
         }
         console.log(getComputerRoll());
 
-        //GET human roll
-        //ADD a prompt to allow user to click a button called roll
-
-        //CREATE a function for when Button pressed, getHumanRoll
-            //CALCULATE random decimal number 
-            //ASSIGN random number a string 1 through 6
-            //RETURN number to console: "You Rolled "num""
-
-       //Assign button above to the function
-        
+        //Human Roll
         function getHumanRoll(){
             const roll = ["1", "2", "3", "4", "5", "6"];
             const index = Math.floor(Math.random() * 6);
             return roll[index]
         }
-        console.log("You Rolled:", getHumanRoll());
 
         const rollButton = document.getElementById("rollButton");
-        rollButton.addEventListener('click', getHumanRoll)
-        //This is logging to console before the button is pressed and the button is doing nothing.
+        
+        rollButton.addEventListener('click', function humanHasRolled () {
+            const result = getHumanRoll();
+            console.log("You rolled:", result);
+        });
+    
+        
        
        
 
