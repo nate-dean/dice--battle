@@ -37,9 +37,11 @@
 
         const rollButton = document.getElementById("rollButton");
         
-        rollButton.addEventListener('click', function humanHasRolled () {
+        rollButton.addEventListener('click', function () {
             let humanRoll = getHumanRoll();
+            let computerRoll = getComputerRoll();
             console.log("You rolled:", humanRoll);
+            playRound(humanRoll, computerRoll);
         });
         
         //Empty score Var
@@ -59,12 +61,6 @@
                 console.log("You Lost, You Rolled the Lower Number!");
             }
         }
-
-        rollButton.addEventListener('click', playRound);
-
-        
-       
-       
 
     </script>
 
