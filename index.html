@@ -25,8 +25,8 @@
             return roll[index]; 
         }
 
-        const computerResult = getComputerRoll();
-        console.log("Computer Rolled:", computerResult);
+        let computerRoll = getComputerRoll();
+        console.log("Computer Rolled:", computerRoll);
 
         //Human Roll
         function getHumanRoll(){
@@ -38,38 +38,29 @@
         const rollButton = document.getElementById("rollButton");
         
         rollButton.addEventListener('click', function humanHasRolled () {
-            const humanResult = getHumanRoll();
-            console.log("You rolled:", humanResult);
+            let humanRoll = getHumanRoll();
+            console.log("You rolled:", humanRoll);
         });
-
+        
         //Empty score Var
         let computerScore = 0;
         let humanScore = 0;
         
         //Game Logic
 
-        //CREATE new function called "playRound"
-
-            //IF human roll and computer roll is the same
-                 //RETURN "It's a Tie!"
-
-            //IF human roll is higher then the computers roll
-                //RETURN "You Rolled Higher, You Win!"
-
-            //ELSE 
-                //RETURN "The Computer Rolled Higher, You Lost"
-
         function playRound(humanRoll, computerRoll){
-            if (humanResult === computerResult) {
+            if (humanRoll === computerRoll) {
                 console.log("It's a Tie!")
             }
-            if (humanResult > computerResult) {
+            if (humanRoll > computerRoll) {
                 console.log("You Won, You Rolled the Higher Number!");
             }
             else {
                 console.log("You Lost, You Rolled the Lower Number!");
             }
         }
+
+        rollButton.addEventListener('click', playRound);
 
         
        
