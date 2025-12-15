@@ -51,7 +51,8 @@
 
         function playRound(humanRoll, computerRoll){
             if (humanRoll === computerRoll) {
-                console.log("It's a Tie!")
+                console.log("It's a Tie!");
+                console.log(`Human-> ${humanScore} Computer-> ${computerScore}`);
             }
             if (humanRoll > computerRoll) {
                 console.log("You Won, You Rolled the Higher Number!");
