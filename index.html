@@ -46,6 +46,7 @@
         //Empty score Var
         let computerScore = 0;
         let humanScore = 0;
+        const winningScore = 5;
         
         //Game Logic
 
@@ -54,7 +55,7 @@
                 console.log("It's a Tie!");
                 console.log(`Human-> ${humanScore} Computer-> ${computerScore}`);
             }
-            if (humanRoll > computerRoll) {
+            else if (humanRoll > computerRoll) {
                 console.log("You Won, You Rolled the Higher Number!");
                 humanScore++;
                 console.log(`Human-> ${humanScore} Computer-> ${computerScore}`);
@@ -64,26 +65,23 @@
                 computerScore++;
                 console.log(`Human-> ${humanScore} Computer-> ${computerScore}`);
             }
+            startGame();
         }
         
         //Repeat until someone wins 5 times.
 
-        //WHEN the score reaches fives log "Victory is Yours!" or "You have been Defeated!" and end loop.
-
-        //CREATE a function called "startGame"
-
-
-            //IF humanScore === 5
-                //LOG "Victory is Yours! Game Over!"
-                //Set the scores back to 0
-
-            //IF computerScore === 5
-                //LOG "You have been Defeated! Game Over!"
-                //Set the Scores back to 0
-
-            //ELSE
-                //RUN the playRound Function
-
+        function startGame(){
+            if (humanScore === 5){
+                console.log("Victory is Yours!")
+                let humanScore = 0;
+                let computerScore = 0;
+            }
+            if (computerScore === 5){
+                console.log("You have been Defeated!");
+                 humanScore = 0;
+                 computerScore = 0;
+            }
+        }
 
 
 
